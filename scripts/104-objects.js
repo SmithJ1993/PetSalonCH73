@@ -51,3 +51,61 @@ sentenceContainer.innerHTML =
 `<li> ${student2.name}. 
 <li> ${student2.age}.`;
 
+// ARRAYS Recap
+// 1. Define the array
+let studentList = ["Justin", "John", "Jill"];
+
+// 2. Access to an item [index]
+studentList[0]; // Justin
+console.log(studentList[0]);
+//Traversing the array // for(index; stop condition; increment)
+for (let i = 0; i < studentList.length; i++) {
+    console.log(studentList[i]);
+}
+//Array of objects
+let professorList = [
+
+    {
+        name: "Justin",
+        email: "justin@example.com",
+        age: 33
+    },
+
+    {
+        name: "John",
+        email: "john@example.com",
+        age: 45
+    },
+
+    {
+        name: "Jill",
+        email: "jill@example.com",
+        age: 40
+    },
+
+];
+console.log(professorList[0].name);
+console.log(professorList[1].name);
+console.log(professorList[2].name);
+
+//exercise 
+//console.log(professorList[0].name)
+//console.log(professorList[3].age);
+// print this sentence "The name is Justin. The email is justin@example.com"
+// `hey hey hey ${professorList[0].name}. The email is ${professorList[0].email}.`
+
+console.log(professorList[0].name);
+console.log(professorList[2].age);
+console.log("The name is " + professorList[0].name + ". The email is " + professorList[0].email + ".");
+console.log(`The name is ${professorList[1].name}. The email is ${professorList[1].email}.`);
+
+// object constructor
+function Student(name, email, cohort) {
+    this.name = name;
+    this.email = email;
+    this.cohort = cohort;
+}
+
+// create a new object using the constructor function
+let student4 = new Student("Mike", "mike@example.com", "Cohort 1");
+console.log(student4);// Output: Mike

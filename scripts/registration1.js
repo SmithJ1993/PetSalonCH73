@@ -32,3 +32,15 @@ function displayPets(){
 }
 displayPets();
 
+function Pet(Name, Age, Gender, ServiceType, Breed){
+    this.Name = Name;
+    this.Age = Age;
+    this.Gender = Gender;
+    this.ServiceType = ServiceType;
+    this.Breed = Breed;
+};
+
+let pet4 = new Pet("Loki", 1, "Male", "Nail Clipping", "Chihuahua");
+let pet5 = new Pet("Bella", 2, "Female", "Vaccination", "Labrador");
+let pet6 = new Pet("Milo", 3, "Male", "Grooming", "Beagle");
+
