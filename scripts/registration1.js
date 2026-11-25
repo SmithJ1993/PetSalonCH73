@@ -44,7 +44,7 @@ function displayRow(pet){
         <td>${pet.Gender}</td>
         <td>${pet.ServiceType}</td>
         <td>
-        <button class="btn btn-danger">Delete</button>
+        <button class="btn btn-danger" onclick="deleteRow(this)">Delete</button>
         </td>
     </tr>
     `;
@@ -55,3 +55,22 @@ displayRow(pet3);
 displayRow(pet4);
 displayRow(pet5);
 displayRow(pet6);
+
+function deleteRow(button){
+    button.parentElement.parentElement.remove();
+}
+
+let btnRegister = document.getElementById("btnRegister");
+btnRegister.addEventListener("click", registerPet);
+
+function registerPet(){
+    let name = document.getElementById("petName").value;
+    let age = document.getElementById("petAge").value;
+    let breed = document.getElementById("petBreed").value;
+    let gender = document.getElementById("petGender").value;
+    let service = document.getElementById("petService").value;
+
+    let newPet = new Pet(name, age, gender, service, breed);
+
+    displayRow(newPet);
+}
